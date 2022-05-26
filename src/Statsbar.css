@@ -1,0 +1,28 @@
+.statsbar-stat-box {
+  box-shadow: 1px 2.5px 5px #cfcfcf;
+  height: 92.78px;
+  width: 281.91px;
+  background-color: #4f46ba;
+  border-radius: 13.7px;
+  color: white;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.statsbar-stat-box-text {
+  margin-left: 20px;
+}
+
+.statsbar-stats-box-img1 {
+  position: absolute;
+  left: 200px;
+  top: -30px;
+}
+
+.statsbar-stats-box-img2 {
+  position: absolute;
+  left: 215px;
+  top: -30px;
+}
