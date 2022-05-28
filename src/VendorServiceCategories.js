@@ -9,9 +9,11 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { VendorServiceCategoriesData } from "./VendorServiceCategoriesData";
 
 const VendorServiceCategories = () => {
+  let navigate = useNavigate();
   return (
     <Paper
       style={{
@@ -74,6 +76,9 @@ const VendorServiceCategories = () => {
           {VendorServiceCategoriesData.map((data) => {
             return (
               <Box
+                onClick={() => {
+                  navigate("/registerToServiceCateogry/dj&music");
+                }}
                 style={{ borderBottom: "1px solid #EAEAEA" }}
                 sx={(theme) => ({
                   backgroundColor:
@@ -100,11 +105,12 @@ const VendorServiceCategories = () => {
                   alt="it's me"
                 />
                 {data.title}
+                {data.path}
               </Box>
             );
           })}
         </Grid.Col>
-
+        <Outlet />
         <Grid.Col span={9}>
           <BackgroundImage
             style={{ height: "100%", width: "100%" }}

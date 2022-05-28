@@ -21,7 +21,7 @@ import {
 import NavbarTop from "./NavbarTop";
 import Sidebar from "./Sidebar";
 import { VendorServiceCategoriesData } from "./VendorServiceCategoriesData";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import VendorServiceCategories from "./VendorServiceCategories";
 import Dashbaordmain from "./Dashbaordmain";
 
@@ -92,14 +92,7 @@ export default function AppShellDash() {
         </Header>
       }
     >
-      <Routes>
-        <Route path="/dashboard" element={<Dashbaordmain />} />
-        <Route
-          path="/ServiceCategories"
-          element={<VendorServiceCategories />}
-        />
-      </Routes>
+      <Outlet />
     </AppShell>
   );
 }
-//       <Dashbaordmain />

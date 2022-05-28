@@ -11,12 +11,12 @@ import { VscSettings } from "react-icons/vsc";
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/dashboard",
+    path: "/",
     icon: <MdDashboard />,
   },
   {
     title: "Service Categories",
-    path: "/ServiceCategories",
+    path: "/",
     icon: <HiUserGroup />,
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
@@ -24,7 +24,7 @@ export const SidebarData = [
     subNav: [
       {
         title: "Register to Service Category",
-        path: "/reports/reports1",
+        path: "/registerToServiceCateogry",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
@@ -38,8 +38,19 @@ export const SidebarData = [
   },
   {
     title: "Bookings",
-    path: "/bookings",
+    path: "/",
     icon: <BiCalendar />,
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpSFill />,
+
+    subNav: [
+      {
+        title: "Create new booking",
+        path: "/registerToServiceCateogry",
+        icon: <IoIcons.IoIosPaper />,
+        cName: "sub-nav",
+      },
+    ],
   },
   {
     title: "Chat",

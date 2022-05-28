@@ -1,7 +1,7 @@
 export const VendorServiceCategoriesData = [
   {
     title: "DJ & Music",
-    path: "",
+    path: "/registerToServiceCateogry/dj&music",
     img: "",
   },
   {
