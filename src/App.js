@@ -23,7 +23,7 @@ import SignUp from "./pages/Signup";
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
-
+//Helo World
 function App() {
   return (
     <MantineProvider>
