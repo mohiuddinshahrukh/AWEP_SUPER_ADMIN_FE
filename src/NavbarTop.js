@@ -1,7 +1,9 @@
+import { ActionIcon, useMantineColorScheme } from "@mantine/core";
 import React from "react";
 import { BsSearch, BsChatLeft } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";
 import { MdNotificationsNone } from "react-icons/md";
+import { Sun } from "tabler-icons-react";
 const NavbarTop = () => {
   return (
     <div>
@@ -29,6 +31,9 @@ const NavbarTop = () => {
           </div>
         </div>
         <div className="navbar-top-right">
+          <ActionIcon variant="outline" title="Toggle color scheme">
+            <Sun />
+          </ActionIcon>
           <FiLogOut className="navbar-top-right-icon" />
           <BsChatLeft className="navbar-top-right-icon" />
           <MdNotificationsNone className="navbar-top-right-icon" />

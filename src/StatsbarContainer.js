@@ -23,24 +23,31 @@ const StatsbarContainer = () => {
   return (
     <Grid columns={12}>
       <Grid.Col sm={12} md={6} lg={4} xl={3}>
-        <Statsbar name="Total Bookings" count={getData.totalBookings} />
+        <Statsbar
+          name="Total Bookings"
+          count={getData.totalBookings}
+          color="#4f46ba"
+        />
       </Grid.Col>
       <Grid.Col sm={12} md={6} lg={4} xl={3}>
         <Statsbar
           name="Bookings Completed"
           count={getData.totalBookingsCompleted}
+          color="blue"
         />
       </Grid.Col>
       <Grid.Col sm={12} md={6} lg={4} xl={3}>
         <Statsbar
           name="Bookings Pending"
           count={getData.totalBookingsPending}
+          color="red"
         />
       </Grid.Col>
       <Grid.Col sm={12} md={6} lg={4} xl={3}>
         <Statsbar
           name="Bookings Cancelled"
           count={getData.totalBookingsCancelled}
+          color="purple"
         />
       </Grid.Col>
     </Grid>

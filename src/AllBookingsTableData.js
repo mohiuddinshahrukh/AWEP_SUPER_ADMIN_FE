@@ -9,7 +9,7 @@ export const AllBookingsTableData = [
     status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
   },
   {
-    sr: 1,
+    sr: 2,
     bookingId: "1234",
     package: "2-day premium Photo Shoot",
     customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
@@ -18,7 +18,7 @@ export const AllBookingsTableData = [
     status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
   },
   {
-    sr: 1,
+    sr: 3,
     bookingId: "1234",
     package: "2-day premium Photo Shoot",
     customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
@@ -27,7 +27,7 @@ export const AllBookingsTableData = [
     status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
   },
   {
-    sr: 1,
+    sr: 4,
     bookingId: "1234",
     package: "2-day premium Photo Shoot",
     customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
@@ -36,7 +36,7 @@ export const AllBookingsTableData = [
     status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
   },
   {
-    sr: 1,
+    sr: 5,
     bookingId: "1234",
     package: "2-day premium Photo Shoot",
     customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },

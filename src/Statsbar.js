@@ -4,7 +4,10 @@ import React, { useEffect, useState } from "react";
 const Statsbar = (props) => {
   return (
     <div className="statsbar-stats">
-      <div className="statsbar-stat-box">
+      <div
+        className="statsbar-stat-box"
+        style={{ backgroundColor: props.color }}
+      >
         <div className="statsbar-stat-box-text">
           <h3>{props.name}</h3>
           <h3>{props.count}</h3>

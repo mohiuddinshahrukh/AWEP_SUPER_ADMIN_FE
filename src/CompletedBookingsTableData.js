@@ -1,0 +1,48 @@
+export const CompletedBookingsTableData = [
+    {
+      sr: 1,
+      bookingId: "1234",
+      package: "2-day premium Photo Shoot",
+      customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
+      completion: { completionDate: "26.05.2019", completionTime: "6.30PM" },
+      payment: { paymentStatus: "Fully Paid", paymentAmount: "Rs: 300,000" },
+      status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
+    },
+    {
+      sr: 2,
+      bookingId: "1234",
+      package: "2-day premium Photo Shoot",
+      customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
+      completion: { completionDate: "26.05.2019", completionTime: "6.30PM" },
+      payment: { paymentStatus: "Fully Paid", paymentAmount: "Rs: 300,000" },
+      status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
+    },
+    {
+      sr: 3,
+      bookingId: "1234",
+      package: "2-day premium Photo Shoot",
+      customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
+      completion: { completionDate: "26.05.2019", completionTime: "6.30PM" },
+      payment: { paymentStatus: "Fully Paid", paymentAmount: "Rs: 300,000" },
+      status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
+    },
+    {
+      sr: 4,
+      bookingId: "1234",
+      package: "2-day premium Photo Shoot",
+      customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
+      completion: { completionDate: "26.05.2019", completionTime: "6.30PM" },
+      payment: { paymentStatus: "Fully Paid", paymentAmount: "Rs: 300,000" },
+      status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
+    },
+    {
+      sr: 5,
+      bookingId: "1234",
+      package: "2-day premium Photo Shoot",
+      customer: { customerName: "Syeda Zaida", bookingDate: "24.05.2019" },
+      completion: { completionDate: "26.05.2019", completionTime: "6.30PM" },
+      payment: { paymentStatus: "Fully Paid", paymentAmount: "Rs: 300,000" },
+      status: { bookingStatus: "Completed", paymentStatus: "Complete Payed" },
+    },
+  ];
+  

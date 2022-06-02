@@ -23,7 +23,9 @@ import SignUp from "./pages/Signup";
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
-//Helo World
+import Setttings from "./Setttings";
+import PolicyEditor from "./PolicyEditor";
+
 function App() {
   return (
     <MantineProvider>
@@ -31,10 +33,12 @@ function App() {
         <ModalsProvider>
           <Router>
             <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/vendor" element={<AppShellDash />}>
                 <Route path="/vendor" element={<Dashbaordmain />} />
+                <Route path="settings" element={<Setttings />} />
+                <Route path="feedbacks&Complaints" element={<PolicyEditor />} />
                 <Route
                   path="registerToServiceCateogry"
                   element={<VendorServiceCategories />}

@@ -48,7 +48,6 @@ const AllBookingsTable = () => {
   const rows = rowData.map((data) => {
     return (
       <>
-        <Button onClick={fetch}>Fetch</Button>
         <tr key={data.sr}>
           <td>{data.sr}</td>
           <td>{data.bookingId}</td>

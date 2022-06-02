@@ -28,12 +28,6 @@ export const SidebarData = [
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
-      {
-        title: "My Services",
-        path: "/vendor/reports/reports2",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "sub-nav",
-      },
     ],
   },
   {
@@ -59,28 +53,15 @@ export const SidebarData = [
   },
   {
     title: "Payments",
-    path: "/vendor/payments",
+    path: "/vendor",
     icon: <GiTakeMyMoney />,
 
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Transactions",
-        path: "/vendor/messages/message1",
-        icon: <IoIcons.IoIosPaper />,
-      },
-      {
-        title: "Payment Methods",
-        path: "/vendor/messages/message2",
-        icon: <IoIcons.IoIosPaper />,
-      },
-    ],
   },
   {
     title: "Feedback & Complaints",
-    path: "/vendor/feedback&Complaints",
+    path: "/vendor/feedbacks&Complaints",
     icon: <BiMessageError />,
   },
   {
