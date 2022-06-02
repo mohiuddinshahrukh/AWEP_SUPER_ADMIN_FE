@@ -31,7 +31,7 @@ function App() {
         <ModalsProvider>
           <Router>
             <Routes>
-              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/vendor" element={<AppShellDash />}>
                 <Route path="/vendor" element={<Dashbaordmain />} />

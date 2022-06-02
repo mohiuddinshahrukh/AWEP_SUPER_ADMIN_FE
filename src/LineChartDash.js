@@ -88,7 +88,7 @@ const LineChartDash = () => {
     <Grid>
       <Grid.Col>
         <AreaChart
-          width={400}
+          width={701.38}
           height={287.51}
           data={data}
           margin={{ top: 5, right: 25, bottom: 5, left: 10 }}
