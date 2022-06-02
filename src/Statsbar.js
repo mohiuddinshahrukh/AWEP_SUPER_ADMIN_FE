@@ -1,18 +1,20 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const Statsbar = () => {
+const Statsbar = (props) => {
   return (
     <div className="statsbar-stats">
       <div className="statsbar-stat-box">
         <div className="statsbar-stat-box-text">
-          <h3>Total Revenue</h3>
-          <h3>1200000</h3>
+          <h3>{props.name}</h3>
+          <h3>{props.count}</h3>
           <img
+            alt="bs"
             className="statsbar-stats-box-img1"
             src={require("./images/screens-stat-box.png")}
           />
           <img
+            alt="bs"
             className="statsbar-stats-box-img2"
             src={require("./images/screens-stat-box1.png")}
           />

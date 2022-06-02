@@ -1,11 +1,12 @@
-import NavbarTop from "./NavbarTop";
 import { FaCashRegister } from "react-icons/fa";
 import { SiApplemusic, SiStylelint } from "react-icons/si";
 import { MdFoodBank } from "react-icons/md";
-import axios from "axios";
+
 import { GoVerified, GoUnverified } from "react-icons/go";
 import {
   Anchor,
+  Button,
+  Center,
   Divider,
   Grid,
   Paper,
@@ -19,10 +20,11 @@ import StatsbarContainer from "./StatsbarContainer";
 
 import LineChart from "./LineChart";
 import PieChartDash from "./PieChartDash";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Calendar } from "@mantine/dates";
 
 import ActionMenuDash from "./ActionMenuDash";
+import axios from "axios";
 
 function CalendarDemo() {
   const [value, setValue] = useState(null);
@@ -47,206 +49,224 @@ const Dashbaordmain = () => {
           {" "}
           <Grid justify="center">
             <Grid.Col justify="center" lg={7}>
-              <LineChart />
+              <Center>
+                <LineChart lineChartTitle="Yearly Revenue (Earned By Subscriptions)" />
+              </Center>
+            </Grid.Col>
+
+            <Grid.Col lg={5} my="md">
+              <Center>
+                {" "}
+                <div className="system-acc-analytics-booking-Tracker">
+                  <Title order={2} m="20px">
+                    Booking Tracker
+                  </Title>
+                  <div className="system-acc-analytics-booking-Tracker-centered">
+                    <Title order={3}>Last 30 Days</Title>
+                    <Grid
+                      align="center"
+                      className="system-acc-analytics-pieChart"
+                    >
+                      <Grid.Col span={12}>
+                        <PieChartDash />
+                      </Grid.Col>
+                    </Grid>
+                    <Title order={2}>Service Booking Distribution</Title>
+                  </div>
+
+                  <div className="system-acc-analytics-all-logos-text">
+                    <div className="system-acc-analytics-logos-text">
+                      <FaCashRegister className="system-acc-analytics-logo1" />
+                      <p className="system-acc-analytics-text">Photography </p>
+                    </div>
+                    <div className="system-acc-analytics-logos-text">
+                      <GoVerified className="system-acc-analytics-logo2" />
+                      <p className="system-acc-analytics-text">Music</p>
+                    </div>
+                    <div className="system-acc-analytics-logos-text">
+                      <GoUnverified className="system-acc-analytics-logo3" />
+                      <p className="system-acc-analytics-text">Decor</p>
+                    </div>
+                  </div>
+                </div>
+              </Center>
+            </Grid.Col>
+
+            <Grid.Col justify="center" lg={7}>
+              <Center>
+                <LineChart lineChartTitle="Yearly Expenses " />
+              </Center>
             </Grid.Col>
 
             <Grid.Col lg={5}>
-              <div className="system-acc-analytics-booking-Tracker">
-                <Title order={2} m="20px">
-                  Booking Tracker
-                </Title>
-                <div className="system-acc-analytics-booking-Tracker-centered">
-                  <Title order={3}>Last 30 Days</Title>
-                  <Grid
-                    align="center"
-                    className="system-acc-analytics-pieChart"
-                  >
-                    <Grid.Col span={12}>
-                      <PieChartDash />
-                    </Grid.Col>
-                  </Grid>
-                  <Title order={2}>Service Booking Distribution</Title>
-                </div>
+              <Center>
+                {" "}
+                <div className="system-acc-analytics-booking-Tracker">
+                  <Title order={2} m="20px">
+                    Booking Tracker
+                  </Title>
+                  <div className="system-acc-analytics-booking-Tracker-centered">
+                    <Title order={3}>Last 30 Days</Title>
+                    <Grid
+                      align="center"
+                      className="system-acc-analytics-pieChart"
+                    >
+                      <Grid.Col span={12}>
+                        <PieChartDash />
+                      </Grid.Col>
+                    </Grid>
+                    <Title order={2}>Service Booking Distribution</Title>
+                  </div>
 
-                <div className="system-acc-analytics-all-logos-text">
-                  <div className="system-acc-analytics-logos-text">
-                    <FaCashRegister className="system-acc-analytics-logo1" />
-                    <p className="system-acc-analytics-text">Photography </p>
-                  </div>
-                  <div className="system-acc-analytics-logos-text">
-                    <GoVerified className="system-acc-analytics-logo2" />
-                    <p className="system-acc-analytics-text">Music</p>
-                  </div>
-                  <div className="system-acc-analytics-logos-text">
-                    <GoUnverified className="system-acc-analytics-logo3" />
-                    <p className="system-acc-analytics-text">Decor</p>
+                  <div className="system-acc-analytics-all-logos-text">
+                    <div className="system-acc-analytics-logos-text">
+                      <FaCashRegister className="system-acc-analytics-logo1" />
+                      <p className="system-acc-analytics-text">Photography </p>
+                    </div>
+                    <div className="system-acc-analytics-logos-text">
+                      <GoVerified className="system-acc-analytics-logo2" />
+                      <p className="system-acc-analytics-text">Music</p>
+                    </div>
+                    <div className="system-acc-analytics-logos-text">
+                      <GoUnverified className="system-acc-analytics-logo3" />
+                      <p className="system-acc-analytics-text">Decor</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Center>
             </Grid.Col>
           </Grid>
         </Grid.Col>
 
         <Grid.Col lg={3}>
-          <div className="system-acc-analytics-container-top">
-            <Title style={{ marginTop: 10, marginLeft: 20 }} order={3}>
-              Calendar
-            </Title>
-            <div className="system-acc-analytics-container-calendar">
-              <CalendarDemo />
-            </div>
-            <Divider my="sm" />
-            <div className="system-acc-analytics-container-middle">
-              <Title m={20} order={3}>
-                My Services
+          <Center>
+            <div className="system-acc-analytics-container-top">
+              <Title style={{ marginTop: 10, marginLeft: 20 }} order={3}>
+                Calendar
               </Title>
+              <div className="system-acc-analytics-container-calendar">
+                <CalendarDemo />
+              </div>
+              <Divider my="sm" />
+              <div className="system-acc-analytics-container-middle">
+                <Title m={20} order={3}>
+                  My Services
+                </Title>
 
-              <Grid justify="space" align="center" mx={10} px={10}>
-                <Grid.Col span={6}>
-                  <Text color="" size="md">
-                    DJ & Music
-                  </Text>
-                  <Text color="#7CE9F6" size="sm">
-                    1423 Bookings
-                  </Text>
-                </Grid.Col>
-                <Grid.Col span={3}></Grid.Col>
-                <Grid.Col span={3}>
-                  <Switch color="green" />
-                </Grid.Col>
-              </Grid>
+                <Grid justify="space" align="center" mx={10} px={10}>
+                  <Grid.Col span={6}>
+                    <Text color="" size="md">
+                      DJ & Music
+                    </Text>
+                    <Text color="#7CE9F6" size="sm">
+                      1423 Bookings
+                    </Text>
+                  </Grid.Col>
+                  <Grid.Col span={3}></Grid.Col>
+                  <Grid.Col span={3}>
+                    <Switch color="green" />
+                  </Grid.Col>
+                </Grid>
 
-              <Grid justify="space" align="center" mx={10} px={10}>
-                <Grid.Col span={6}>
-                  <Text color="" size="md">
-                    Photography
-                  </Text>
-                  <Text color="#F9896B" size="sm">
-                    1299 Bookings
-                  </Text>
-                </Grid.Col>
-                <Grid.Col span={3}></Grid.Col>
-                <Grid.Col span={3}>
-                  <Switch color="green" />
-                </Grid.Col>
-              </Grid>
+                <Grid justify="space" align="center" mx={10} px={10}>
+                  <Grid.Col span={6}>
+                    <Text color="" size="md">
+                      Photography
+                    </Text>
+                    <Text color="#F9896B" size="sm">
+                      1299 Bookings
+                    </Text>
+                  </Grid.Col>
+                  <Grid.Col span={3}></Grid.Col>
+                  <Grid.Col span={3}>
+                    <Switch color="green" />
+                  </Grid.Col>
+                </Grid>
 
-              <Grid justify="space" align="center" mx={10} px={10}>
-                <Grid.Col span={6}>
-                  <Text color="" size="md">
-                    Decor
-                  </Text>
-                  <Text color="#2B00D4" size="sm">
-                    632 Bookings
-                  </Text>
-                </Grid.Col>
-                <Grid.Col span={3}></Grid.Col>
-                <Grid.Col span={3}>
-                  <Switch color="green" />
-                </Grid.Col>
-              </Grid>
+                <Grid justify="space" align="center" mx={10} px={10}>
+                  <Grid.Col span={6}>
+                    <Text color="" size="md">
+                      Decor
+                    </Text>
+                    <Text color="#2B00D4" size="sm">
+                      632 Bookings
+                    </Text>
+                  </Grid.Col>
+                  <Grid.Col span={3}></Grid.Col>
+                  <Grid.Col span={3}>
+                    <Switch color="green" />
+                  </Grid.Col>
+                </Grid>
 
-              <Divider my="lg" />
-              <Grid align="center">
-                <Grid.Col span={6}>
-                  <Title mx={20} order={3}>
-                    Popular Packages
-                  </Title>
-                </Grid.Col>
-                <Grid.Col offset={3} span={3}>
-                  <Anchor component={Link} to="/react-router">
-                    View All
-                  </Anchor>
-                </Grid.Col>
-              </Grid>
+                <Divider my="lg" />
+                <Grid align="center">
+                  <Grid.Col span={6}>
+                    <Title mx={20} order={3}>
+                      Popular Packages
+                    </Title>
+                  </Grid.Col>
+                  <Grid.Col offset={3} span={3}>
+                    <Anchor component={Link} to="/react-router">
+                      View All
+                    </Anchor>
+                  </Grid.Col>
+                </Grid>
 
-              <Grid align="center" mx={10}>
-                <Grid.Col span={2}>
-                  <SiApplemusic
-                    style={{
-                      backgroundColor: "white",
-                      color: "#B558F6",
-                      height: "44.4px",
-                      width: "39.36px",
-                    }}
-                  />
-                </Grid.Col>
-                <Grid.Col span={8}>DJ & Music</Grid.Col>
-                <Grid.Col span={2}>
-                  <ActionMenuDash />
-                </Grid.Col>
-              </Grid>
+                <Grid align="center" mx={10}>
+                  <Grid.Col span={2}>
+                    <SiApplemusic
+                      style={{
+                        backgroundColor: "white",
+                        color: "#B558F6",
+                        height: "44.4px",
+                        width: "39.36px",
+                      }}
+                    />
+                  </Grid.Col>
+                  <Grid.Col span={8}>DJ & Music</Grid.Col>
+                  <Grid.Col span={2}>
+                    <ActionMenuDash />
+                  </Grid.Col>
+                </Grid>
 
-              <Grid align="center" mx={10}>
-                <Grid.Col span={2}>
-                  <SiStylelint
-                    style={{
-                      backgroundColor: "white",
-                      color: "#B558F6",
-                      height: "44.4px",
-                      width: "39.36px",
-                    }}
-                  />
-                </Grid.Col>
-                <Grid.Col span={8}>Stage & Decor</Grid.Col>
-                <Grid.Col span={2}>
-                  <ActionMenuDash />
-                </Grid.Col>
-              </Grid>
+                <Grid align="center" mx={10}>
+                  <Grid.Col span={2}>
+                    <SiStylelint
+                      style={{
+                        backgroundColor: "white",
+                        color: "#B558F6",
+                        height: "44.4px",
+                        width: "39.36px",
+                      }}
+                    />
+                  </Grid.Col>
+                  <Grid.Col span={8}>Stage & Decor</Grid.Col>
+                  <Grid.Col span={2}>
+                    <ActionMenuDash />
+                  </Grid.Col>
+                </Grid>
 
-              <Grid align="center" mx={10}>
-                <Grid.Col span={2}>
-                  <MdFoodBank
-                    style={{
-                      backgroundColor: "white",
-                      color: "#B558F6",
-                      height: "44.4px",
-                      width: "39.36px",
-                    }}
-                  />
-                </Grid.Col>
-                <Grid.Col span={8}>Food & Catering</Grid.Col>
-                <Grid.Col span={2}>
-                  <ActionMenuDash />
-                </Grid.Col>
-              </Grid>
+                <Grid align="center" mx={10}>
+                  <Grid.Col span={2}>
+                    <MdFoodBank
+                      style={{
+                        backgroundColor: "white",
+                        color: "#B558F6",
+                        height: "44.4px",
+                        width: "39.36px",
+                      }}
+                    />
+                  </Grid.Col>
+                  <Grid.Col span={8}>Food & Catering</Grid.Col>
+                  <Grid.Col span={2}>
+                    <ActionMenuDash />
+                  </Grid.Col>
+                </Grid>
+              </div>
             </div>
-          </div>
+          </Center>
         </Grid.Col>
-      </Grid>{" "}
-      <div className="lineChartFloat">
-        <LineChart />
-      </div>
-      <div className="pieChartFloat">
-        <div className="system-acc-analytics-booking-Tracker">
-          <h2 className="system-acc-analytics-booking-Tracker-h2">
-            Booking Tracker
-          </h2>
-          <div className="system-acc-analytics-booking-Tracker-centered">
-            <h3 className="system-acc-analytics-booking-Tracker-h3">
-              Last 30 Days
-            </h3>
-            <div className="system-acc-analytics-pieChart">
-              <PieChartDash />
-            </div>
-            <h2>Service Booking Distribution</h2>
-          </div>
-          <div className="system-acc-analytics-all-logos-text">
-            <div className="system-acc-analytics-logos-text">
-              <FaCashRegister className="system-acc-analytics-logo1" />
-              <p className="system-acc-analytics-text">Photography </p>
-            </div>
-            <div className="system-acc-analytics-logos-text">
-              <GoVerified className="system-acc-analytics-logo2" />
-              <p className="system-acc-analytics-text">Music</p>
-            </div>
-            <div className="system-acc-analytics-logos-text">
-              <GoUnverified className="system-acc-analytics-logo3" />
-              <p className="system-acc-analytics-text">Decor</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Grid>
     </Paper>
   );
 };

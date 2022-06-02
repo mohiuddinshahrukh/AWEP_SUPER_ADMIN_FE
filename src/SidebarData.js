@@ -11,12 +11,12 @@ import { VscSettings } from "react-icons/vsc";
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/",
+    path: "/vendor",
     icon: <MdDashboard />,
   },
   {
     title: "Service Categories",
-    path: "/",
+    path: "/vendor",
     icon: <HiUserGroup />,
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
@@ -24,13 +24,13 @@ export const SidebarData = [
     subNav: [
       {
         title: "Register to Service Category",
-        path: "/registerToServiceCateogry",
+        path: "/vendor/registerToServiceCateogry",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
       {
         title: "My Services",
-        path: "/reports/reports2",
+        path: "/vendor/reports/reports2",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
@@ -38,7 +38,7 @@ export const SidebarData = [
   },
   {
     title: "Bookings",
-    path: "/",
+    path: "/vendor/bookings",
     icon: <BiCalendar />,
     iconClosed: <RiArrowDownSFill />,
     iconOpened: <RiArrowUpSFill />,
@@ -46,7 +46,7 @@ export const SidebarData = [
     subNav: [
       {
         title: "Create new booking",
-        path: "/registerToServiceCateogry",
+        path: "/vendor/registerToServiceCateogry",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
@@ -54,12 +54,12 @@ export const SidebarData = [
   },
   {
     title: "Chat",
-    path: "/chat",
+    path: "/vendor/chat",
     icon: <BsChatTextFill />,
   },
   {
     title: "Payments",
-    path: "/payments",
+    path: "/vendor/payments",
     icon: <GiTakeMyMoney />,
 
     iconClosed: <RiArrowDownSFill />,
@@ -68,24 +68,24 @@ export const SidebarData = [
     subNav: [
       {
         title: "Transactions",
-        path: "/messages/message1",
+        path: "/vendor/messages/message1",
         icon: <IoIcons.IoIosPaper />,
       },
       {
         title: "Payment Methods",
-        path: "/messages/message2",
+        path: "/vendor/messages/message2",
         icon: <IoIcons.IoIosPaper />,
       },
     ],
   },
   {
     title: "Feedback & Complaints",
-    path: "/feedback&Complaints",
+    path: "/vendor/feedback&Complaints",
     icon: <BiMessageError />,
   },
   {
     title: "Settings",
-    path: "/settings",
+    path: "/vendor/settings",
     icon: <VscSettings />,
   },
 ];

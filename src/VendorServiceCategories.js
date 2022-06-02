@@ -9,11 +9,11 @@ import {
   Title,
 } from "@mantine/core";
 import React from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import BgImage from "./BgImage";
 import { VendorServiceCategoriesData } from "./VendorServiceCategoriesData";
 
 const VendorServiceCategories = () => {
-  let navigate = useNavigate();
   return (
     <Paper
       style={{
@@ -72,58 +72,61 @@ const VendorServiceCategories = () => {
       </Grid>
 
       <Grid style={{ width: "100%", height: "100%" }}>
-        <Grid.Col span={3} style={{ borderRight: "1px solid #EAEAEA" }}>
+        <Grid.Col
+          span={3}
+          style={{
+            borderRight: "1px solid #EAEAEA",
+          }}
+        >
           {VendorServiceCategoriesData.map((data) => {
             return (
-              <Box
-                onClick={() => {
-                  navigate("/registerToServiceCateogry/dj&music");
+              <Link
+                to={data.path}
+                style={{
+                  textDecoration: "none",
                 }}
-                style={{ borderBottom: "1px solid #EAEAEA" }}
-                sx={(theme) => ({
-                  backgroundColor:
-                    theme.colorScheme === "dark"
-                      ? theme.colors.dark[6]
-                      : theme.colors.gray[0],
-                  textAlign: "center",
-                  alignItems: "center",
-                  padding: theme.spacing.md,
-                  borderRadius: theme.radius.md,
-                  cursor: "pointer",
-                  margin: "10px",
-
-                  "&:hover": {
+              >
+                <Box
+                  style={{ borderBottom: "1px solid #EAEAEA" }}
+                  sx={(theme) => ({
                     backgroundColor:
                       theme.colorScheme === "dark"
-                        ? theme.colors.dark[5]
-                        : theme.colors.gray[1],
-                  },
-                })}
-              >
-                <Avatar
-                  src="https://source.unsplash.com/1300x710/?London"
-                  alt="it's me"
-                />
-                {data.title}
-                {data.path}
-              </Box>
+                        ? theme.colors.dark[6]
+                        : theme.colors.gray[0],
+
+                    display: "flex",
+                    alignItems: "center",
+
+                    padding: theme.spacing.md,
+                    borderRadius: theme.radius.md,
+                    cursor: "pointer",
+                    margin: "10px",
+                    color: "black",
+                    "&:hover": {
+                      backgroundColor:
+                        theme.colorScheme === "dark"
+                          ? theme.colors.dark[5]
+                          : theme.colors.gray[1],
+                    },
+                  })}
+                >
+                  <Avatar
+                    style={{ marginLeft: "10%", marginRight: "10%" }}
+                    src={data.img}
+                    alt="it's me"
+                    size="lg"
+                  />
+
+                  <Title order={4}> {data.title}</Title>
+                </Box>
+              </Link>
             );
           })}
         </Grid.Col>
-        <Outlet />
         <Grid.Col span={9}>
-          <BackgroundImage
-            style={{ height: "100%", width: "100%" }}
-            src={require("./images/sitChair.png")}
-          >
-            <Center p="md">
-              <Text color="#000">
-                BackgroundImage component can be used to add any content on
-                image. It is useful for hero headers and other similar sections
-              </Text>
-            </Center>
-          </BackgroundImage>
+          <Outlet />
         </Grid.Col>
+        <Grid.Col span={9}></Grid.Col>
       </Grid>
     </Paper>
   );

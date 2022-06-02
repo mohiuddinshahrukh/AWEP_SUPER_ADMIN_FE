@@ -1,3 +1,4 @@
+import { Grid } from "@mantine/core";
 import {
   CartesianGrid,
   XAxis,
@@ -5,6 +6,7 @@ import {
   Tooltip,
   AreaChart,
   Area,
+  ResponsiveContainer,
 } from "recharts";
 const data = [
   {
@@ -83,38 +85,40 @@ const data = [
 
 const LineChartDash = () => {
   return (
-    <div>
-      <AreaChart
-        width={701.38}
-        height={287.51}
-        data={data}
-        margin={{ top: 5, right: 25, bottom: 5, left: 10 }}
-      >
-        <defs>
-          <linearGradient id="colorFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor={"#4CDFE8"} stopOpacity={0.5} />
-            <stop offset="95%" stopColor="#7947F7" stopOpacity={0} />
-          </linearGradient>
+    <Grid>
+      <Grid.Col>
+        <AreaChart
+          width={400}
+          height={287.51}
+          data={data}
+          margin={{ top: 5, right: 25, bottom: 5, left: 10 }}
+        >
+          <defs>
+            <linearGradient id="colorFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={"#4CDFE8"} stopOpacity={0.5} />
+              <stop offset="95%" stopColor="#7947F7" stopOpacity={0} />
+            </linearGradient>
 
-          <linearGradient id="colorStroke" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor={"#4CDFE8"} stopOpacity={1} />
-            <stop offset="95%" stopColor="#7947F7" stopOpacity={1} />
-          </linearGradient>
-        </defs>
+            <linearGradient id="colorStroke" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={"#4CDFE8"} stopOpacity={1} />
+              <stop offset="95%" stopColor="#7947F7" stopOpacity={1} />
+            </linearGradient>
+          </defs>
 
-        <CartesianGrid vertical={false} strokeDasharray="5" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
+          <CartesianGrid vertical={false} strokeDasharray="5" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
 
-        <Area
-          type="monotone"
-          dataKey="Revenue"
-          stroke="url(#colorStroke)"
-          fill="url(#colorFill)"
-        />
-      </AreaChart>
-    </div>
+          <Area
+            type="monotone"
+            dataKey="Revenue"
+            stroke="url(#colorStroke)"
+            fill="url(#colorFill)"
+          />
+        </AreaChart>
+      </Grid.Col>
+    </Grid>
   );
 };
 

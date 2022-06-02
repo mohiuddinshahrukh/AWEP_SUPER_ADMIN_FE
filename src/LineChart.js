@@ -1,20 +1,30 @@
-import React from "react";
+import { Grid, Select, Title } from "@mantine/core";
+import React, { useState } from "react";
+import { ResponsiveContainer } from "recharts";
 import LineChartDash from "./LineChartDash";
 
-const LineChart = () => {
+const LineChart = (props) => {
+  const [data, setData] = useState(["Yearly", "Monthly", "Weekly", "Daily"]);
   return (
-    <div className="system-acc-analytics-lineChart">
-      <div className="system-acc-analytics-lineChart-label-dropdown">
-        <h3>Yearly Revenue (Earned By Subscriptions)</h3>
-        <select className="system-acc-analytics-lineChart-select" name="" id="">
-          <option value="">Yearly</option>
-          <option value="">Monthly</option>
-          <option value="">Daily</option>
-        </select>
-      </div>
-
-      <LineChartDash />
-    </div>
+    <ResponsiveContainer width="100%" height="100%">
+      <Grid m="md" style={{ border: "1px solid #EAEAEA" }}>
+        <Grid.Col span={9}>
+          <Title order={3}>{props.lineChartTitle}</Title>
+        </Grid.Col>
+        <Grid.Col span={3}>
+          <Select
+            data={data}
+            nothingFound="Nothing found"
+            defaultValue={data[0]}
+            searchable
+            creatable
+            getCreateLabel={(query) => `+ Create ${query}`}
+            onCreate={(query) => setData((current) => [...current, query])}
+          />
+        </Grid.Col>
+        <LineChartDash />
+      </Grid>
+    </ResponsiveContainer>
   );
 };
 
