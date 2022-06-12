@@ -22,7 +22,7 @@ import {
   Settings,
   Trash,
 } from "tabler-icons-react";
-import AlonsoMoselyChat from "./AlonsoMoselyChat";
+
 import { ChatsData } from "./ChatsData";
 
 const Chats = () => {

@@ -1,27 +1,8 @@
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  Grid,
-  SegmentedControl,
-  Title,
-} from "@mantine/core";
+import { Box, Center, Container, SegmentedControl } from "@mantine/core";
 import React from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import {
-  CalendarPlus,
-  Check,
-  CircleX,
-  Cross,
-  Eye,
-  Loader,
-  LoaderQuarter,
-  Notebook,
-  X,
-} from "tabler-icons-react";
-import BookingsTable from "./AllBookingsTable";
-// notebook, check, loader, calendar plus
+import { Outlet, useNavigate } from "react-router-dom";
+import { Check, Loader, Notebook, X } from "tabler-icons-react";
+
 const BookingsPage = () => {
   let navigate = useNavigate();
   return (

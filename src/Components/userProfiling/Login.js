@@ -6,23 +6,20 @@ import {} from "@mantine/core";
 import { At } from "tabler-icons-react";
 import { Lock } from "tabler-icons-react";
 import { Checkbox } from "@mantine/core";
-import ReCAPTCHA from "react-google-recaptcha";
+
 import { useForm } from "@mantine/form";
 import { Link } from "react-router-dom";
 import { showNotification } from "@mantine/notifications";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const axios = require("axios");
 
 function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [loading, setLoading] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+
   let navigate = useNavigate();
-  function onChange(value) {
-    console.log("Captcha value:", value);
-    setDisabled(false);
-  }
+
   const form = useForm({
     initialValues: {
       email: "",
@@ -40,7 +37,7 @@ function Login() {
     setErrorMessages({});
     setLoading(true);
 
-    var { email, password, termsOfService } = event;
+    var { email, password } = event;
     console.log(event);
 
     // if keep me logged in is false then save in session else save in local storage
@@ -145,10 +142,9 @@ function Login() {
             />
   </Center>*/}
           <Center>
-            {" "}
             <Button
               type="submit"
-              disabled={disabled}
+              disabled={false}
               style={{ width: 150 }}
               loading={loading}
             >

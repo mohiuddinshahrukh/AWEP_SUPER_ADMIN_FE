@@ -1,30 +1,28 @@
-import "./App.css";
-
-import axios from "axios";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./Components/userProfiling/Login";
+import SignUp from "./Components/userProfiling/Signup";
 
-import AppShellDash from "./AppShellDash";
-import VendorServiceCategories from "./VendorServiceCategories";
-import Dashbaordmain from "./Dashbaordmain";
+import AppShellDash from "./Components/userNavigation/AppShellDash";
+import Dashbaordmain from "./Components/userDashboard/Dashbaordmain";
 
-import DjandMusic from "./DjandMusic";
-import BookingsPage from "./BookingsPage";
-import { AllBookingsTableData } from "./AllBookingsTableData";
-import AllBookingsTable from "./AllBookingsTable";
-import CompletedBookingsTable from "./CompletedBookingsTable";
-import PendingBookingsTable from "./PendingBookingsTable";
-import TodaysBookingsTable from "./TodaysBookingsTable";
-import Chats from "./Chats";
-import BgImage from "./BgImage";
-import AlonsoMoselyChat from "./AlonsoMoselyChat";
-import Login from "./pages/Login";
-import SignUp from "./pages/Signup";
+import VendorServiceCategories from "./Components/userServiceCategories/VendorServiceCategories";
+import DjandMusic from "./Components/userServiceCategories/DjandMusic";
+import BgImage from "./Components/userServiceCategories/BgImage";
+
+import BookingsPage from "./Components/userBookings/BookingsPage";
+import AllBookingsTable from "./Components/userBookings/AllBookingsTable";
+import CompletedBookingsTable from "./Components/userBookings/CompletedBookingsTable";
+import PendingBookingsTable from "./Components/userBookings/PendingBookingsTable";
+import TodaysBookingsTable from "./Components/userBookings/TodaysBookingsTable";
+
+import Chats from "./Components/userChat/Chats";
+import AlonsoMoselyChat from "./Components/userChat/AlonsoMoselyChat";
+
 import { MantineProvider } from "@mantine/core";
 import { NotificationsProvider } from "@mantine/notifications";
 import { ModalsProvider } from "@mantine/modals";
-import Setttings from "./Setttings";
-import PolicyEditor from "./PolicyEditor";
+import Setttings from "./Components/userSettings/Setttings";
+import PolicyEditor from "./Components/userPolicy/PolicyEditor";
 
 function App() {
   return (

@@ -9,13 +9,11 @@ import {
   useMantineTheme,
   Title,
   Grid,
-  MantineProvider,
 } from "@mantine/core";
 import NavbarTop from "./NavbarTop";
-import Sidebar from "./Sidebar";
+
 import { Outlet } from "react-router-dom";
-import Dashbaordmain from "./Dashbaordmain";
-import { NotificationsProvider } from "@mantine/notifications";
+import Sidebar from "./Sidebar";
 
 export default function AppShellDash() {
   const theme = useMantineTheme();

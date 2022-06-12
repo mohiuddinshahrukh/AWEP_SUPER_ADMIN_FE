@@ -1,4 +1,4 @@
-import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { ActionIcon } from "@mantine/core";
 import React from "react";
 import { BsSearch, BsChatLeft } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";

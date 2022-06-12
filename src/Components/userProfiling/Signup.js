@@ -1,5 +1,5 @@
 import loginImg from "./1.png";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import {
   Button,
@@ -9,15 +9,14 @@ import {
   RadioGroup,
   Radio,
 } from "@mantine/core";
-import {} from "@mantine/core";
+
 import { At, User } from "tabler-icons-react";
 import { Lock } from "tabler-icons-react";
 import { Checkbox } from "@mantine/core";
-import ReCAPTCHA from "react-google-recaptcha";
+
 import { useForm } from "@mantine/form";
 import { Link, useNavigate } from "react-router-dom";
 import { showNotification } from "@mantine/notifications";
-import { useForceUpdate } from "@mantine/hooks";
 
 const axios = require("axios");
 
@@ -25,18 +24,11 @@ function SignUp() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [loading, setLoading] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+
   const [enabled, setEnabled] = useState(false);
   let navigate = useNavigate();
   const [value, setValue] = useState();
-  function onChange(value) {
-    console.log("Captcha value:", value);
-    if (value === null) {
-      setDisabled(true);
-    } else {
-      setDisabled(false);
-    }
-  }
+
   const form = useForm({
     initialValues: {
       email: "",
@@ -225,7 +217,7 @@ function SignUp() {
           <Center>
             <Button
               type="submit"
-              disabled={disabled | !enabled}
+              disabled={false | !enabled}
               style={{ width: 150 }}
               loading={loading}
             >

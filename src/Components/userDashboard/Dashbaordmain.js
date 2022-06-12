@@ -5,7 +5,6 @@ import { MdFoodBank } from "react-icons/md";
 import { GoVerified, GoUnverified } from "react-icons/go";
 import {
   Anchor,
-  Button,
   Center,
   Divider,
   Grid,
@@ -14,17 +13,16 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import StatsbarContainer from "./StatsbarContainer";
 
 import LineChart from "./LineChart";
 import PieChartDash from "./PieChartDash";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { Calendar } from "@mantine/dates";
 
 import ActionMenuDash from "./ActionMenuDash";
-import axios from "axios";
 
 function CalendarDemo() {
   const [value, setValue] = useState(null);
@@ -46,7 +44,6 @@ const Dashbaordmain = () => {
       <Divider />
       <Grid>
         <Grid.Col lg={9}>
-          {" "}
           <Grid justify="center">
             <Grid.Col justify="center" lg={7}>
               <Center>
@@ -56,7 +53,6 @@ const Dashbaordmain = () => {
 
             <Grid.Col lg={5} my="md">
               <Center>
-                {" "}
                 <div className="system-acc-analytics-booking-Tracker">
                   <Title order={2} m="20px">
                     Booking Tracker

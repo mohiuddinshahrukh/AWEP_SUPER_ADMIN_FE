@@ -1,6 +1,6 @@
 import { Box, Center, Grid, Select, Switch, Text, Title } from "@mantine/core";
 import React from "react";
-import { ChevronRight, Container } from "tabler-icons-react";
+import { ChevronRight } from "tabler-icons-react";
 
 const Setttings = () => {
   return (

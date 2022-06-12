@@ -1,48 +1,18 @@
 import {
   ActionIcon,
   BackgroundImage,
-  Button,
   Center,
-  Divider,
-  Menu,
-  Modal,
   Table,
   Text,
 } from "@mantine/core";
 import { useModals } from "@mantine/modals";
 import React, { useState } from "react";
-import {
-  ArrowsLeftRight,
-  Container,
-  Edit,
-  Eye,
-  MessageCircle,
-  Photo,
-  Plus,
-  Search,
-  Settings,
-  Trash,
-} from "tabler-icons-react";
+import { Edit, Eye, Trash } from "tabler-icons-react";
 import { AllBookingsTableData } from "./AllBookingsTableData.js";
-import axios from "axios";
+
 const CompletedBookingsTable = () => {
-  const fetch = () => {
-    axios
-      .get(
-        "https://a-wep.herokuapp.com/superAdmin/getAllVendorPackageBookings/5126bbf64aed4daf9e2ab771",
-        {
-          headers: {
-            token:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGUzMWEwYzdiZjBkMTM1Mjk3OGVkZSIsImVtYWlsIjoibXVoYW1tYWR0YWxoYTUxN0BnbWFpbC5jb20iLCJ1c2VyVHlwZSI6InN1cGVyQWRtaW4iLCJpYXQiOjE2NTM1NjA1NDksImV4cCI6NDI0NTU2MDU0OX0.a0kss8hgIiVNYLaw56YXfWpMjldkccMbsMs6v__ZEdg",
-          },
-        }
-      )
-      .then((data) => {
-        console.log(data.data);
-      });
-  };
   const [rowData, setRowData] = useState(AllBookingsTableData);
-  const [opened, setOpened] = useState(false);
+
   const modals = useModals();
 
   const rows = rowData.map((data) => {

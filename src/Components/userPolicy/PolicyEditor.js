@@ -1,22 +1,13 @@
-import { Paper, Button, Grid, Modal } from "@mantine/core";
-import React from "react";
+import { Paper, Button, Modal } from "@mantine/core";
+
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { RichTextEditor } from "@mantine/rte";
 import "./PolicyEditor.css";
-import {
-  Text,
-  InputWrapper,
-  Input,
-  NumberInput,
-  Title,
-  PasswordInput,
-} from "@mantine/core";
+import { Text, Title } from "@mantine/core";
 import { useMantineTheme } from "@mantine/core";
-import { Group } from "@mantine/core";
 
-import { ArrowRight } from "tabler-icons-react";
 import { ThumbUp } from "tabler-icons-react";
 const initialValue =
   "<p>Your initial <b>html value</b> or an empty string to init editor without value</p>";
@@ -70,7 +61,11 @@ const PolicyEditor = () => {
           Yes, Discard
         </Button>
       </Modal>
-      <RichTextEditor value={value} onChange={onChange} style={{height:"80vh"}} />
+      <RichTextEditor
+        value={value}
+        onChange={onChange}
+        style={{ height: "80vh" }}
+      />
       <div className="button">
         <Button
           m="md"

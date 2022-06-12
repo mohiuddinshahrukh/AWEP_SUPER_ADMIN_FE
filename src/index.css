@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import "./NavbarTop.css";
-@import "./Sidebar.css";
-@import "./Navigation.css";
-@import url("./Statsbar.css");
-@import url("./StatsbarContainer.css");
+@import "./Components/userDashboard/NavbarTop.css";
+@import "./Components/userDashboard/Sidebar.css";
+@import "./Components/userDashboard/Navigation.css";
+@import url("./Components/userDashboard/Statsbar.css");
+@import url("./Components/userDashboard/StatsbarContainer.css");
 * {
   font-family: Poppins;
   margin: 0;

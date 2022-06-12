@@ -1,5 +1,5 @@
 import React from "react";
-import { Cell, Pie, PieChart } from "recharts";
+import { Pie, PieChart } from "recharts";
 
 const data = [
   { name: "Group A", value: 400 },

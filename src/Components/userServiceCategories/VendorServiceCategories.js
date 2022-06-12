@@ -1,16 +1,6 @@
-import {
-  Avatar,
-  BackgroundImage,
-  Box,
-  Center,
-  Grid,
-  Paper,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Avatar, Box, Grid, Paper, Title } from "@mantine/core";
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import BgImage from "./BgImage";
 import { VendorServiceCategoriesData } from "./VendorServiceCategoriesData";
 
 const VendorServiceCategories = () => {
